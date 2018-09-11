@@ -8,7 +8,11 @@ require('./mongo-database-connection');
 
 const theaters = require('./controllers/theaters');
 
-app.use('/theaters', theaters);
+router.get('/', (req, res) => {
+  res.send('Hi?')
+});
+
+router.use('/theaters', theaters);
 
 module.exports = app.listen(port, () => {
   console.log('Action!')
