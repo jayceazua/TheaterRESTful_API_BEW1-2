@@ -8,7 +8,7 @@ require('./mongo-database-connection');
 
 const theaters = require('./controllers/theaters');
 
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hi?')
 });
 
