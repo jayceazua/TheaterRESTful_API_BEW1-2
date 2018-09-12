@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const app = express();
@@ -15,5 +16,5 @@ app.get('/', (req, res) => {
 router.use('/theaters', theaters);
 
 module.exports = app.listen(port, () => {
-  console.log(`Action! Server is on at port:`)
+  console.log(`Action! Server is on at port: ${port}`)
 });
