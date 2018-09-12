@@ -2,12 +2,20 @@ const express = require('express');
 const router = express.Router();
 
 // CREATE - post a new
-router.post('');
+router.post('', () => {
+
+});
 // READ
-router.get('/:id')
+router.get('/:id', () => {
+
+});
 // UPDATE - update
-router.put('/:id')
+router.put('/:id', () => {
+
+});
 // DELETE
-router.delete('/:id')
+router.delete('/:id', () => {
+
+});
 
 module.exports = router;
