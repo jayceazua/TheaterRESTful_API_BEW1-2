@@ -15,5 +15,5 @@ app.get('/', (req, res) => {
 router.use('/theaters', theaters);
 
 module.exports = app.listen(port, () => {
-  console.log('Action!')
+  console.log(`Action! Server is on at port:`)
 });
