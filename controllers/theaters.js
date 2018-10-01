@@ -19,7 +19,23 @@ router.post('/theaters/new', (req, res) => {
 //  save into mongo database
 
 
-  res.json({'stub': `[${req.originalUrl}] Endpoint works! Replace me in Part 2.`});
+  res.json({'theater': `[${req.originalUrl}] Endpoint works! Replace me in Part 2.`});
 });
+
+// create a session POST
+    // save the session default status is: inProgress
+
+// update the session if time expires... "only when it does expire: no time session" PUT
+    // update in mongo -  change the status
+    // update when you successfully purchase a session?
+
+/**********************
+theater only and session.
+
+Above theate; below cart
+************************/
+
+
+
 
 module.exports = router;
