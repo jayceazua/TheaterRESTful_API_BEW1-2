@@ -10,7 +10,6 @@
   "author": "Jayce Azua && jayce.azua@students.makeschool.com",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "mongodb": "^3.1.4"
   }
