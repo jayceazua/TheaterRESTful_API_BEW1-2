@@ -1,6 +1,16 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const port = 3000;
+
+// mongodb connection
+// Paste this at the top of `server.js`
+const dbuser = process.env.DB_UN
+const dbpass = process.env.DB_PW
+const dbName = process.env.DB_N;
+const url = `mongodb://${dbuser}:${dbpass}@ds153552.mlab.com:53552/${dbName}`;
+
+
 
 // Theater SHOW:
 app.get('/theaters', (req, res) => {
@@ -30,7 +40,9 @@ app.delete('/theaters/:id', (req, res) => {
     });
 });
 
-/* Above is Theaters; below is Sessions */
+/* Above is Theaters;
+
+    Below is Sessions */
 
 // Sessions SHOW all:
 app.get('/theaters/:id/sessions', (req, res) => {
@@ -60,7 +72,9 @@ app.delete('/theaters/:id/sessions/:id', (req, res) => {
     });
 });
 
+// TODO: CARTS
+
 
 app.listen(port, () => {
-    console.log(`Action! Server is on at port: ${port}`)
+    console.log(`Action! Server is on at port: ${port}`);
 });
